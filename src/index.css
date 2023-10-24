@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  user-select: none;
+}
+
+.custom-border-gradient {
+    border-image: linear-gradient(to right, #6015FF 100%, #7958EF 0%);
+    border-image-slice: 1;
+    background-clip: padding-box;
+}
+
+.gradient-text{
+  background: linear-gradient(to right, #6015FF,#fff, #7958EF);
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip:text;
+  color:#fff;
+
+  display:block;
+  transition: color .2s ease-in-out;
+}
+.gradient-text:hover{
+  color:rgba(0,0,0,0);
+}
+@keyframes rainbow { 
+  0%{background-position:left}
+  50%{background-position:right}
+  100%{background-position:left}
+}
+
+@keyframes rotate360 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotating-element {
+    animation: rotate360 20s linear infinite;
+    /* 
+    - 'rotate360' je naziv animacije definisan iznad.
+    - '2s' označava trajanje animacije (2 sekunde).
+    - 'linear' označava linearno ubrzanje animacije.
+    - 'infinite' označava da animacija traje beskrajno.
+    */
+  }
